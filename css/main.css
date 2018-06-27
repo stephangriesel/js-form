@@ -58,8 +58,8 @@ h1.logo {
 
 #input-group {
   position: relative;
-  padding: 30px 20p 20px 20px;
-  margin: 10px 60px 10px 10px;
+  padding: 70px 20p 20px 20px;
+  margin: 30px 60px 40px 10px;
   opacity: 1;
   transition: opacity 0.3s ease-in-out; }
   #input-group input {
@@ -72,4 +72,17 @@ h1.logo {
     background: transparent;
     box-shadow: none; }
   #input-group #input-label {
-    position: absolute; }
+    position: absolute;
+    pointer-events: none;
+    top: 32px;
+    left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.2s ease-out; }
+  #input-group input:valid + #input-label {
+    top: 5px;
+    left: 300px;
+    margin-left: 0 !important;
+    font-size: 11px;
+    font-weight: normal;
+    color: #acacac; }
