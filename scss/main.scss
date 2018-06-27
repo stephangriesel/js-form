@@ -76,3 +76,26 @@ h1.logo {
         color:$secondary;
     }
 }
+
+#input-group {
+    position: relative;
+    padding:30px 20p 20px 20px;
+    margin:10px 60px 10px 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+        input {
+            position: relative;
+            width: 100%;
+            border: none;
+            font-size:20px;
+            font-weight: bold;
+            outline:0;
+            background:transparent;
+            box-shadow: none;
+        }
+
+        #input-label {
+            position: absolute;
+        }
+}
