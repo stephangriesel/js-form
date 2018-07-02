@@ -24,6 +24,13 @@ const inputProgress = document.querySelector('#input-progress');
 const progress = document.querySelector('#progress-bar');
 
 //Events
+
+// Get question on dom load
+document.addEventListener('DOMContentLoaded', getQuestion);
+
+// Next Button Click 
+nextBtn.addEventListener('click', validate);
+
 document.addEventListener('DOMContentLoaded', getQuestion);
 
 // Functions 
@@ -54,3 +61,40 @@ function showQuestion() {
     inputProgress.style.transition = '';
     inputProgress.style.width = '100%';
 }
+
+// Hide question
+
+function hideQuestion() {
+    inputGroup.style.opacity = 0;
+    inputLabel.style.marginLeft = 0;
+    inputProgress.style.width = 0;
+    inputProgress.style.transition = 'none';
+    inputGroup.style.border = null;
+}
+
+// Transform To Create Shake Motion
+function transform(x, y) {
+
+}
+
+// Validate field 
+function validate() {
+    // Validate pattern matches if it exists
+    if(!inputField.value.match(questions[position].pattern || /.+/))
+    {
+        inputFail();
+    } else {
+        inputPass();
+    }
+
+}
+
+ // Field Input Fail
+ function inputFail() {
+
+ }
+
+ // Field Input Passed
+ function inputPass() {
+
+ }
