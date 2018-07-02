@@ -74,7 +74,7 @@ function hideQuestion() {
 
 // Transform To Create Shake Motion
 function transform(x, y) {
-
+    formBox.style.transform = `translate(${x}px, ${y}px)`;
 }
 
 // Validate field 
