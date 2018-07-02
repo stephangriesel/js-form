@@ -91,6 +91,14 @@ function validate() {
 
  // Field Input Fail
  function inputFail() {
+     formBox.className = 'error'
+     // Create for loop to specify the number of shakes
+     for (let i = 0; i < 9; i++){
+         setTimeout(transform, shakeTime * i, ((i % 2) * 2 - 1) * 20,0);
+         setTimeout(transform, shakeTime * 9,0,0);
+         inputField.focus();
+     }
+
 
  }
 
