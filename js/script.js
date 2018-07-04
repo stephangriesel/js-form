@@ -104,5 +104,7 @@ function validate() {
 
  // Field Input Passed
  function inputPass() {
-
+     formBox.className = '';
+     setTimeout(transform,shakeTime * 0, 0, 10);
+     setTimeout(transform,shakeTime * 1, 0, 0);
  }

@@ -80,8 +80,8 @@ h1.logo {
     font-weight: bold;
     transition: 0.2s ease-out; }
   #input-group input:valid + #input-label {
-    top: 5px;
-    left: 300px;
+    top: 40px;
+    left: 150px;
     margin-left: 0 !important;
     font-size: 11px;
     font-weight: normal;
