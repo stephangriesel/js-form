@@ -74,6 +74,7 @@ function hideQuestion() {
 
 // Transform To Create Shake Motion
 function transform(x, y) {
+    console.log(x,y); // Test shake motion
     formBox.style.transform = `translate(${x}px, ${y}px)`;
 }
 
@@ -107,4 +108,20 @@ function validate() {
      formBox.className = '';
      setTimeout(transform,shakeTime * 0, 0, 10);
      setTimeout(transform,shakeTime * 1, 0, 0);
- }
+
+     // Increment position 
+     position++;
+
+     // If new q, hide current and move on to next
+     if(questions[position]) {
+         hideQuestion();
+         getQuestion();
+     } else {
+         hideQuestion();
+         formBox.className = 'close';
+         progress.style.width = '100%';
+         formComplete();
+     }
+
+
+    }
