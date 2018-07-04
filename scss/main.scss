@@ -18,6 +18,13 @@ h1.logo {
     font-size: 4em;
 }
 
+h1.end {
+    position: relative;
+    color:#FFFFFF;
+    opacity: 0;
+    transition: 0.8s ease-in-out;
+}
+
 #container {
     height:100vh;
     display: flex;
@@ -108,8 +115,8 @@ h1.logo {
         }
 
         input:valid + #input-label {
-            top:5px;
-            left:300px;
+            top:40px;
+            left:250px;
             margin-left:0 !important;
             font-size:11px;
             font-weight: normal;

@@ -31,7 +31,14 @@ document.addEventListener('DOMContentLoaded', getQuestion);
 // Next Button Click 
 nextBtn.addEventListener('click', validate);
 
-document.addEventListener('DOMContentLoaded', getQuestion);
+// document.addEventListener('DOMContentLoaded', getQuestion);
+
+// Input field enter enable
+inputField.addEventListener('keyup', e => {
+    if(e.keyCode == 13) {
+        validate();
+    }
+});
 
 // Functions 
 
@@ -124,4 +131,16 @@ function validate() {
      }
 
 
+    }
+
+    // All fields complete - Show h1 end 
+    function formComplete(){
+        const h1 = document.createElement('h1');
+        h1.addClass('end');
+        h1.appendChild(document.createTextNode(`Dankjewel ${question[0].answer} All seems to be good, you will get more details in your inbox shortly`));
+        setTimeout(() => {
+            formBox.parentElement.appendChild(h1);
+            setTimeout(() => h1.style.opacity = 1, 50);
+        }, 1000);
+        
     }
